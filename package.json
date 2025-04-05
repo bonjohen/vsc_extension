@@ -1,0 +1,43 @@
+{
+  "name": "augment-readme-creator",
+  "displayName": "Augment README Creator",
+  "description": "Create README files using Augment AI",
+  "version": "0.1.0",
+  "publisher": "example",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/augment-readme-creator"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "augment-readme-creator.createReadme",
+        "title": "Create Test README with Augment"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "echo \"No linting configured\"",
+    "test": "node ./out/test/runTest.js"
+  },
+  "extensionDependencies": [
+    "augment.vscode-augment"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.82.0",
+    "typescript": "^5.5.3"
+  }
+}
